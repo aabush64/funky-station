@@ -671,11 +671,6 @@
         "hash": "sha256-DVNWNgfuZCOmHQVilZG8se3JxvFXTcL09+dJQo98P3w="
     },
     {
-        "pname": "Microsoft.NETCore.App.Ref",
-        "version": "8.0.22",
-        "hash": "sha256-00SIT4Pme2xeYb8PUSALAnHeOIR3UlJwlK0hRZkzjS4="
-    },
-    {
         "pname": "Microsoft.NETCore.DotNetHost",
         "version": "1.0.1",
         "hash": "sha256-yiyZ4KGVRDZRgAuoSl4ZNWnRR3ityniyRPvzS799JOM="
