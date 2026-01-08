@@ -42,20 +42,20 @@ buildDotnetModule {
   pname = "FunkyStation-${platform}-${build}";
   version = "0.0";
 
-  #src = fetchFromGitHub {
-  #  owner = "funky-station";
-  #  repo = "funky-station";
-  #  rev = "8042471671519453a06d1f266ad7b3ebb64b93b1";
-  #  hash = "";
+  src = fetchFromGitHub {
+    owner = "aabush64";
+    repo = "funky-station";
+    rev = "";
+    hash = "";
 
-  #  fetchSubmodules = true;
-  #};
+    fetchSubmodules = true;
+  };
 
-  src = ./.;
+  #src = ../.;
 
-  projectFile = "src/SpaceStation14.sln";
-  dotnet-sdk = dotnetCorePackages.sdk_10_0-bin;
-  dotnet-runtime = dotnetCorePackages.runtime_10_0-bin;
+  projectFile = "SpaceStation14.sln";
+  dotnet-sdk = dotnetCorePackages.sdk_9_0-bin;
+  dotnet-runtime = dotnetCorePackages.runtime_9_0-bin;
 
   buildType = build;
 
