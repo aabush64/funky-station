@@ -45,8 +45,8 @@ buildDotnetModule {
   src = fetchFromGitHub {
     owner = "aabush64";
     repo = "funky-station";
-    rev = "";
-    hash = "";
+    rev = "7d2cee1be98d405b4b0fd5abe02a0ee4856f9e07";
+    hash = "sha256-5bGtDskOggX142UkX3QjoIa+/IunNAG3F6I6gJDL71E=";
 
     fetchSubmodules = true;
   };
@@ -54,8 +54,11 @@ buildDotnetModule {
   #src = ../.;
 
   projectFile = "SpaceStation14.sln";
-  dotnet-sdk = dotnetCorePackages.sdk_9_0-bin;
-  dotnet-runtime = dotnetCorePackages.runtime_9_0-bin;
+  #dotnet-sdk = (with dotnetCorePackages; combinePackages [ sdk_9_0-bin sdk_8_0-bin ]);
+  #dotnet-runtime = (with dotnetCorePackages; combinePackages [ runtime_9_0-bin sdk_8_0-bin ]);
+
+  dotnet-sdk = dotnetCorePackages.sdk_8_0-bin;
+  dotnet-runtime = dotnetCorePackages.runtime_8_0-bin;
 
   buildType = build;
 
